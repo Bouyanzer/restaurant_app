@@ -173,7 +173,9 @@ Cette section détaille les entités principales, leurs attributs et leurs relat
 | DELETE | `/api/v1/reviews/{id}` | Supprimer un avis. | CRUD (Suppression) |
 
 ## 5. Diagramme : 
+### Diagramme de classe
 ![WhatsApp Image 2025-11-23 à 11 28 03_b2b8c043](https://github.com/user-attachments/assets/41bb66bc-d61c-4587-960d-764922774c8a)
+### Diagramme Merise
 <img width="509" height="385" alt="Entite_Asso_Diag" src="https://github.com/user-attachments/assets/b2f6e244-82d7-4089-a525-ab7acd3b35df" />
 
 
