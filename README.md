@@ -1,5 +1,5 @@
 # Restaurant_app
-# DOCUMENTATION TECHNIQUE - FOOD DELIVERY API
+# DOCUMENTATION  - FOOD DELIVERY API
 
 
 ## 1. Contexte du Projet
