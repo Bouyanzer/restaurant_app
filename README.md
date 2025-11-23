@@ -12,7 +12,7 @@ L'application vise à formaliser les échanges entre restaurateurs et clients en
 L'application est conçue selon une architecture modulaire et conteneurisée.
 
 * **Backend/API RESTful :** Développé en Java/Spring Boot.
-* **Base de Données :** PostgreSQL (PSQL) (base de données relationnelle obligatoire).
+* **Base de Données :** PostgreSQL (PSQL).
 * **ORM :** Utilisation d'Hibernate/JPA via Spring Data JPA.
 * **Conteneurisation :** L'ensemble des services est conteneurisé avec Docker et orchestré via Docker Compose.
 
