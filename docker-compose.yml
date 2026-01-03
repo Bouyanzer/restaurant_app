@@ -1,22 +1,33 @@
+version: "3.8"
+
 services:
-  db:
-    container_name: food-ordering
-    image: postgres
+  mysql:
+    image: mysql:8.0
+    container_name: mon_restaurant_mysql
     environment:
-      POSTGRES_USER: mblaszczykowski
-      POSTGRES_PASSWORD: password
-      PGDATA: /data/postgres
-    volumes:
-      - db:/data/postgres
+      MYSQL_DATABASE: mon_restaurant
+      MYSQL_USER: bouyanzer
+      MYSQL_PASSWORD: bouyanzer
+      MYSQL_ROOT_PASSWORD: root
     ports:
-      - "5332"
-    networks:
-      - db
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
     restart: unless-stopped
 
-networks:
-  db:
-    driver: bridge
+  api:
+    image: mon_restaurant-api
+    build: .                         # <--- LIGNE AJOUTÉE (Indispensable !)
+    container_name: mon_restaurant_api
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/mon_restaurant
+      SPRING_DATASOURCE_USERNAME: bouyanzer
+      SPRING_DATASOURCE_PASSWORD: bouyanzer
+    restart: unless-stopped
 
 volumes:
-  db:
+  mysql_data:
